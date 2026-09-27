@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>SJ & SONS JEWELLERS | 100% BIS Hallmarked</title>
-  <meta property="og:title" content="🌸 SJ & SONS JEWELLERS 🌸">
-  <meta property="og:description" content="100% BIS Hallmarked Gold & Pure Silver Jewellery. Thank you for joining our family!">
-  <meta property="og:image" content="file_00000000b748211cc2c45bf705462c5.png">
+  <title>SJ & SONS JEWELLERS</title>
+
+  <!-- WhatsApp & Social Card Preview -->
+  <meta property="og:title" content="SJ & SONS JEWELLERS">
+  <meta property="og:description" content="Follow us on Instagram & Join our VIP WhatsApp Group for latest designs!">
+  <meta property="og:image" content="./file_00000000b748211cc2c45bf705462c5.png">
   <meta property="og:type" content="website">
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons for Instagram & WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     * {
@@ -22,221 +26,209 @@
 
     body {
       min-height: 100vh;
-      background: radial-gradient(circle at top, #1a2a2c, #0a1113 80%);
-      color: #fff;
+      background-color: #12131a;
+      background-image: radial-gradient(circle at 50% 20%, #202230 0%, #0e0f15 100%);
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px 15px;
+      padding: 30px 16px;
     }
 
-    .ambient-glow {
-      position: fixed;
-      width: 300px;
-      height: 300px;
-      background: rgba(212, 175, 55, 0.18);
-      filter: blur(120px);
-      border-radius: 50%;
-      top: 10%;
-      z-index: 0;
-    }
-
-    .card {
-      position: relative;
-      z-index: 1;
+    /* Carrd Container */
+    .carrd-wrapper {
       width: 100%;
-      max-width: 440px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-radius: 24px;
-      padding: 30px 22px;
-      text-align: center;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(212, 175, 55, 0.1);
+      max-width: 380px;
+      background: #1b1c24;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
     }
 
-    .logo-container {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 16px;
+    /* Top Banner */
+    .banner-header {
+      width: 100%;
+      height: 150px;
+      position: relative;
+      background: #2a2b38;
+    }
+
+    .banner-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1), #1b1c24);
+    }
+
+    /* Avatar / Logo */
+    .avatar-box {
+      width: 104px;
+      height: 104px;
+      margin: -52px auto 14px;
+      position: relative;
+      z-index: 2;
       border-radius: 50%;
       padding: 3px;
-      background: linear-gradient(135deg, #d4af37, #fff2a3, #aa7c11);
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
-      overflow: hidden;
+      background: linear-gradient(135deg, #d4af37, #f3e5ab, #aa7c11);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
     }
 
-    .logo-container img {
+    .avatar-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
+      background: #000;
       display: block;
     }
 
+    /* Content Area */
+    .content-box {
+      padding: 0 24px 30px;
+      text-align: center;
+    }
+
     h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
-      letter-spacing: 2px;
-      background: linear-gradient(135deg, #f9e79f, #d4af37, #fff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 8px;
-    }
-
-    .tagline {
-      font-size: 13px;
-      color: #e0d5ba;
-      font-style: italic;
-      line-height: 1.5;
-      margin-bottom: 22px;
-    }
-
-    .badge-bar {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
-
-    .badge {
-      font-size: 11px;
-      background: rgba(212, 175, 55, 0.12);
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      color: #f1dfa8;
-      padding: 6px 12px;
-      border-radius: 30px;
+      color: #ffffff;
       letter-spacing: 0.5px;
+      margin-bottom: 6px;
     }
 
-    .btn-group {
+    .bio {
+      font-size: 13px;
+      color: #9ea3b5;
+      line-height: 1.5;
+      margin-bottom: 26px;
+    }
+
+    /* Links / Action Cards */
+    .links-list {
       display: flex;
       flex-direction: column;
       gap: 14px;
-      margin-bottom: 25px;
     }
 
-    .btn {
+    .link-card {
+      display: flex;
+      align-items: center;
+      background: #242632;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      padding: 14px 18px;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .link-card:active {
+      transform: scale(0.98);
+      background: #2b2e3c;
+    }
+
+    /* Circular Social Icons */
+    .icon-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 14px;
-      font-weight: 600;
-      font-size: 14px;
-      transition: all 0.3s ease;
+      font-size: 20px;
+      color: #ffffff;
+      flex-shrink: 0;
     }
 
-    .btn-whatsapp {
+    .icon-instagram {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      box-shadow: 0 4px 15px rgba(214, 36, 159, 0.35);
+    }
+
+    .icon-whatsapp {
       background: linear-gradient(135deg, #25D366, #128C7E);
-      color: #fff;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
     }
 
-    .btn-gold {
-      background: linear-gradient(135deg, #e6c875, #d4af37, #997116);
-      color: #1a1a1a;
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
-    }
-
-    .btn-outline {
-      background: rgba(255, 255, 255, 0.05);
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .btn:active {
-      transform: scale(0.98);
-    }
-
-    .info-box {
-      background: rgba(0, 0, 0, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 16px;
+    .link-info {
+      margin-left: 16px;
       text-align: left;
-      margin-bottom: 20px;
     }
 
-    .info-box h3 {
-      font-family: 'Cinzel', serif;
-      color: #d4af37;
+    .link-info h2 {
       font-size: 15px;
-      margin-bottom: 10px;
-      text-align: center;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-      padding-bottom: 6px;
+      font-weight: 600;
+      color: #ffffff;
     }
 
-    .info-box ul {
-      list-style: none;
-      font-size: 12.5px;
-      color: #cfd8dc;
-      line-height: 2;
+    .link-info p {
+      font-size: 12px;
+      color: #8c91a4;
     }
 
-    .info-box ul li::before {
-      content: "✦ ";
-      color: #d4af37;
-      font-weight: bold;
-    }
-
-    footer {
+    /* Bottom Trust Tag */
+    .footer-note {
+      margin-top: 24px;
       font-size: 11px;
-      color: #8c9ba5;
+      color: #d4af37;
       letter-spacing: 0.5px;
     }
   </style>
 </head>
 <body>
 
-  <div class="ambient-glow"></div>
-
-  <div class="card">
-    <div class="logo-container">
-      <img src="file_0000000015cb11f60ab4cfe571fb75f0.png" alt="SJ & Sons Jewellers Logo">
+  <div class="carrd-wrapper">
+    <!-- Top Banner Image -->
+    <div class="banner-header">
+      <img src="./file_00000000b748211cc2c45bf705462c5.png" alt="SJ Jewellers Banner">
+      <div class="banner-overlay"></div>
     </div>
 
-    <h1>SJ & SONS JEWELLERS</h1>
-    <p class="tagline">100% BIS Hallmarked Gold & Pure Silver Jewellery.<br>Thank you for joining our family! ✨</p>
-
-    <div class="badge-bar">
-      <span class="badge">916 BIS Hallmark</span>
-      <span class="badge">Trusted Purity</span>
-      <span class="badge">Custom Orders</span>
+    <!-- Center Avatar Logo -->
+    <div class="avatar-box">
+      <img src="./file_0000000015cb11f60ab4cfe571fb75f0.png" alt="SJ Jewellers Logo">
     </div>
 
-    <div class="btn-group">
-      <a href="https://wa.me/919999999999?text=Namaste!%20Mujhe%20jewellery%20ke%20designs%20aur%20rate%20jaan-ne%20hain." class="btn btn-whatsapp">
-        💬 Chat on WhatsApp
-      </a>
-      <a href="tel:+919999999999" class="btn btn-gold">
-        📞 Call Us Now
-      </a>
-      <a href="https://maps.google.com" class="btn btn-outline">
-        📍 Get Store Location
-      </a>
-    </div>
+    <!-- Bio & Links -->
+    <div class="content-box">
+      <h1>SJ & SONS JEWELLERS</h1>
+      <p class="bio">100% BIS Hallmarked Gold & Silver Jewellery.<br>Stay connected with us for daily new designs!</p>
 
-    <div class="info-box">
-      <h3>Our Specialties</h3>
-      <ul>
-        <li>916 BIS Hallmarked Gold Ornaments</li>
-        <li>Exclusive Bridal & Antique Collections</li>
-        <li>Certified Diamond & Precious Stones</li>
-        <li>Pure Silver Utensils, Coins & Gifts</li>
-        <li>Custom Jewellery Designed on Order</li>
-      </ul>
-    </div>
+      <div class="links-list">
+        <!-- Instagram Link -->
+        <a href="https://instagram.com" target="_blank" class="link-card">
+          <div class="icon-badge icon-instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="link-info">
+            <h2>Instagram</h2>
+            <p>Follow us for latest collections</p>
+          </div>
+        </a>
 
-    <footer>
-      ✨ शुद्धता और विश्वास, आपकी अपनी दुकान! ✨
-    </footer>
+        <!-- WhatsApp Community/Group Link -->
+        <a href="https://chat.whatsapp.com/" target="_blank" class="link-card">
+          <div class="icon-badge icon-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="link-info">
+            <h2>WhatsApp Group</h2>
+            <p>Join our VIP community updates</p>
+          </div>
+        </a>
+      </div>
+
+      <p class="footer-note">✦ 100% Hallmarked & Trusted ✦</p>
+    </div>
   </div>
 
 </body>
