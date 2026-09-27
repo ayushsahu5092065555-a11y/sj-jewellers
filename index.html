@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- WhatsApp & Social Media Preview Cards (इससे WhatsApp पर फोटो, नाम और टैगलाइन दिखेगी) -->
+  <title>SJ & SONS JEWELLERS | 100% BIS Hallmarked</title>
+  <meta property="og:title" content="🌸 SJ & SONS JEWELLERS 🌸">
+  <meta property="og:description" content="100% BIS Hallmarked Gold & Pure Silver Jewellery. Thank you for joining our family!">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1000&auto=format&fit=crop">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #1a2a2c, #0a1113 80%);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 15px;
+    }
+
+    .ambient-glow {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      background: rgba(212, 175, 55, 0.18);
+      filter: blur(120px);
+      border-radius: 50%;
+      top: 10%;
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 440px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 30px 22px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(212, 175, 55, 0.1);
+    }
+
+    .logo-container {
+      width: 105px;
+      height: 105px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, #d4af37, #fff2a3, #aa7c11);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #000;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, #f9e79f, #d4af37, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 13px;
+      color: #e0d5ba;
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+
+    .badge-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-size: 11px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: #f1dfa8;
+      padding: 6px 12px;
+      border-radius: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #e6c875, #d4af37, #997116);
+      color: #1a1a1a;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .info-box {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .info-box h3 {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      font-size: 15px;
+      margin-bottom: 10px;
+      text-align: center;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      padding-bottom: 6px;
+    }
+
+    .info-box ul {
+      list-style: none;
+      font-size: 12.5px;
+      color: #cfd8dc;
+      line-height: 2;
+    }
+
+    .info-box ul li::before {
+      content: "✦ ";
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    footer {
+      font-size: 11px;
+      color: #8c9ba5;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <div class="card">
+    <div class="logo-container">
+      <img src="https://via.placeholder.com/150/000000/d4af37?text=SJ" alt="SJ & Sons Logo">
+    </div>
+
+    <h1>𝑆𝐽 & 𝑆𝑂𝑁𝑆 𝐽𝐸𝑊𝐸𝐿𝐿𝐸𝑅𝑆</h1>
+    <p class="tagline">100% 𝐵𝐼𝑆 𝐻𝑎𝑙𝑙𝑚𝑎𝑟𝑘𝑒𝑑 𝐺𝑜𝑙𝑑 & 𝑃𝑢𝑟𝑒 𝑆𝑖𝑙𝑣𝑒𝑟 𝐽𝑒𝑤𝑒𝑙𝑙𝑒𝑟𝑦.<br>𝑇ℎ𝑎𝑛𝑘 𝑦𝑜𝑢 𝑓𝑜𝑟 𝑗𝑜𝑖𝑛𝑖𝑛𝑔 𝑜𝑢𝑟 𝑓𝑎𝑚𝑖𝑙𝑦! ✨</p>
+
+    <div class="badge-bar">
+      <span class="badge">916 BIS Hallmark</span>
+      <span class="badge">Trusted Purity</span>
+      <span class="badge">Custom Orders</span>
+    </div>
+
+    <div class="btn-group">
+      <a href="https://wa.me/919999999999?text=Namaste!%20Mujhe%20jewellery%20ke%20designs%20aur%20rate%20jaan-ne%20hain." class="btn btn-whatsapp">
+        💬 𝐶ℎ𝑎𝑡 𝑜𝑛 𝑊ℎ𝑎𝑡𝑠𝐴𝑝𝑝
+      </a>
+      <a href="tel:+919999999999" class="btn btn-gold">
+        📞 𝐶𝑎𝑙𝑙 𝑈𝑠 𝑁𝑜𝑤
+      </a>
+      <a href="https://maps.google.com" class="btn btn-outline">
+        📍 𝐺𝑒𝑡 𝑆𝑡𝑜𝑟𝑒 𝐿𝑜𝑐𝑎𝑡𝑖𝑜𝑛
+      </a>
+    </div>
+
+    <div class="info-box">
+      <h3>𝑂𝑢𝑟 𝑆𝑝𝑒𝑐𝑖𝑎𝑙𝑡𝑖𝑒𝑠</h3>
+      <ul>
+        <li>916 𝐵𝐼𝑆 𝐻𝑎𝑙𝑙𝑚𝑎𝑟𝑘𝑒𝑑 𝐺𝑜𝑙𝑑 𝑂𝑟𝑛𝑎𝑚𝑒𝑛𝑡𝑠</li>
+        <li>𝐸𝑥𝑐𝑙𝑢𝑠𝑖𝑣𝑒 𝐵𝑟𝑖𝑑𝑎𝑙 & 𝐴𝑛𝑡𝑖𝑞𝑢𝑒 𝐶𝑜𝑙𝑙𝑒𝑐𝑡𝑖𝑜𝑛𝑠</li>
+        <li>𝐶𝑒𝑟𝑡𝑖𝑓𝑖𝑒𝑑 𝐷𝑖𝑎𝑚𝑜𝑛𝑑 & 𝑃𝑟𝑒𝑐𝑖𝑜𝑢𝑠 𝑆𝑡𝑜𝑛𝑒𝑠</li>
+        <li>𝑃𝑢𝑟𝑒 𝑆𝑖𝑙𝑣𝑒𝑟 𝑈𝑡𝑒𝑛𝑠𝑖𝑙𝑠, 𝐶𝑜𝑖𝑛𝑠 & 𝐺𝑖𝑓𝑡𝑠</li>
+        <li>𝐶𝑢𝑠𝑡𝑜𝑚 𝐽𝑒𝑤𝑒𝑙𝑙𝑒𝑟𝑦 𝐷𝑒𝑠𝑖𝑔𝑛𝑒𝑑 𝑜𝑛 𝑂𝑟𝑑𝑒𝑟</li>
+      </ul>
+    </div>
+
+    <footer>
+      ✨ शुद्धता और विश्वास, आपकी अपनी दुकान! ✨
+    </footer>
+  </div>
+
+</body>
+  </html>
+  
