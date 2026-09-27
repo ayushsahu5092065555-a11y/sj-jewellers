@@ -4,230 +4,179 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SJ & SONS JEWELLERS</title>
-
-  <!-- WhatsApp & Social Card Preview -->
-  <meta property="og:title" content="SJ & SONS JEWELLERS">
-  <meta property="og:description" content="Follow us on Instagram & Join our VIP WhatsApp Group for latest designs!">
-  <meta property="og:image" content="./file_00000000b748211cc2c45bf705462c5.png">
-  <meta property="og:type" content="website">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- FontAwesome Icons for Instagram & WhatsApp -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
 
     body {
+      background-color: #0b0c10;
+      color: #ffffff;
       min-height: 100vh;
-      background-color: #12131a;
-      background-image: radial-gradient(circle at 50% 20%, #202230 0%, #0e0f15 100%);
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 30px 16px;
+      padding: 20px;
     }
 
-    /* Carrd Container */
-    .carrd-wrapper {
+    /* मुख्य कार्ड */
+    .card {
       width: 100%;
-      max-width: 380px;
-      background: #1b1c24;
+      max-width: 420px;
+      background: #14161d;
       border-radius: 28px;
       overflow: hidden;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Top Banner */
-    .banner-header {
-      width: 100%;
-      height: 150px;
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+      text-align: center;
       position: relative;
-      background: #2a2b38;
     }
 
-    .banner-header img {
+    /* बैनर इमेज */
+    .banner-container {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .banner-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.1), #1b1c24);
-    }
-
-    /* Avatar / Logo */
-    .avatar-box {
-      width: 104px;
-      height: 104px;
-      margin: -52px auto 14px;
-      position: relative;
-      z-index: 2;
-      border-radius: 50%;
-      padding: 3px;
-      background: linear-gradient(135deg, #d4af37, #f3e5ab, #aa7c11);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-    }
-
-    .avatar-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
+      height: 190px;
+      overflow: hidden;
       background: #000;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
-    /* Content Area */
-    .content-box {
-      padding: 0 24px 30px;
-      text-align: center;
+    /* मुख्य जानकारी */
+    .content {
+      padding: 24px 20px;
     }
 
-    h1 {
-      font-size: 20px;
+    .title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      background: linear-gradient(45deg, #ffd700, #ffb347, #fff0aa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #a0a5b5;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    /* रेनबो एनिमेटेड इंस्टाग्राम बटन */
+    .rainbow-btn-wrapper {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      border-radius: 18px;
+      padding: 3px;
+      background: linear-gradient(90deg, #ff007f, #ff7b00, #ffee00, #00f0ff, #7000ff, #ff007f);
+      background-size: 300% 300%;
+      animation: rainbowGlow 4s linear infinite;
+      box-shadow: 0 0 20px rgba(255, 0, 128, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .rainbow-btn-wrapper:active {
+      transform: scale(0.97);
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.65);
+    }
+
+    @keyframes rainbowGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .btn-inner {
+      background: #111319;
+      border-radius: 15px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* इंस्टाग्राम SVG आइकॉन */
+    .insta-icon {
+      width: 36px;
+      height: 36px;
+      fill: #ffffff;
+      filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.2));
+    }
+
+    .btn-title {
+      font-size: 16px;
       font-weight: 700;
       color: #ffffff;
       letter-spacing: 0.5px;
-      margin-bottom: 6px;
     }
 
-    .bio {
+    .btn-join {
       font-size: 13px;
-      color: #9ea3b5;
-      line-height: 1.5;
-      margin-bottom: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #ff007f, #ffb347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    /* Links / Action Cards */
-    .links-list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .link-card {
-      display: flex;
-      align-items: center;
-      background: #242632;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 18px;
-      padding: 14px 18px;
-      text-decoration: none;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .link-card:active {
-      transform: scale(0.98);
-      background: #2b2e3c;
-    }
-
-    /* Circular Social Icons */
-    .icon-badge {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
+    /* नीचे का ट्रस्ट बैज */
+    .footer-badge {
+      margin-top: 25px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #d4af37;
+      letter-spacing: 0.5px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
-      color: #ffffff;
-      flex-shrink: 0;
-    }
-
-    .icon-instagram {
-      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-      box-shadow: 0 4px 15px rgba(214, 36, 159, 0.35);
-    }
-
-    .icon-whatsapp {
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
-    }
-
-    .link-info {
-      margin-left: 16px;
-      text-align: left;
-    }
-
-    .link-info h2 {
-      font-size: 15px;
-      font-weight: 600;
-      color: #ffffff;
-    }
-
-    .link-info p {
-      font-size: 12px;
-      color: #8c91a4;
-    }
-
-    /* Bottom Trust Tag */
-    .footer-note {
-      margin-top: 24px;
-      font-size: 11px;
-      color: #d4af37;
-      letter-spacing: 0.5px;
+      gap: 6px;
     }
   </style>
 </head>
 <body>
 
-  <div class="carrd-wrapper">
-    <!-- Top Banner Image -->
-    <div class="banner-header">
-      <img src="./file_00000000b748211cc2c45bf705462c5.png" alt="SJ Jewellers Banner">
-      <div class="banner-overlay"></div>
+  <div class="card">
+    <!-- बैनर इमेज -->
+    <div class="banner-container">
+      <img src="banner.jpg" alt="SJ & Sons Jewellers Banner" class="banner-img">
     </div>
 
-    <!-- Center Avatar Logo -->
-    <div class="avatar-box">
-      <img src="./file_0000000015cb11f60ab4cfe571fb75f0.png" alt="SJ Jewellers Logo">
-    </div>
+    <!-- कंटेंट -->
+    <div class="content">
+      <h1 class="title">SJ & SONS JEWELLERS</h1>
+      <p class="subtitle">100% BIS Hallmarked Gold & Silver Jewellery.<br>Stay connected with us for daily new designs!</p>
 
-    <!-- Bio & Links -->
-    <div class="content-box">
-      <h1>SJ & SONS JEWELLERS</h1>
-      <p class="bio">100% BIS Hallmarked Gold & Silver Jewellery.<br>Stay connected with us for daily new designs!</p>
+      <!-- Instagram रेनबो बटन -->
+      <!-- ध्यान दें: href में अपना Instagram प्रोफाइल लिंक पेस्ट कर लें -->
+      <a href="https://instagram.com/" target="_blank" class="rainbow-btn-wrapper">
+        <div class="btn-inner">
+          <svg class="insta-icon" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span class="btn-title">Instagram</span>
+          <span class="btn-join">✨ JOIN NOW ✨</span>
+        </div>
+      </a>
 
-      <div class="links-list">
-        <!-- Instagram Link -->
-        <a href="https://instagram.com" target="_blank" class="link-card">
-          <div class="icon-badge icon-instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </div>
-          <div class="link-info">
-            <h2>Instagram</h2>
-            <p>Follow us for latest collections</p>
-          </div>
-        </a>
-
-        <!-- WhatsApp Community/Group Link -->
-        <a href="https://chat.whatsapp.com/" target="_blank" class="link-card">
-          <div class="icon-badge icon-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
-          </div>
-          <div class="link-info">
-            <h2>WhatsApp Group</h2>
-            <p>Join our VIP community updates</p>
-          </div>
-        </a>
+      <!-- बॉटम बैज -->
+      <div class="footer-badge">
+        ✦ 100% Hallmarked & Trusted ✦
       </div>
-
-      <p class="footer-note">✦ 100% Hallmarked & Trusted ✦</p>
     </div>
   </div>
 
